@@ -15,23 +15,10 @@ const Controls: React.FC<ControlsProps> = ({ balance, gameState, buttonState, be
   const [currentBet, setCurrentBet] = useState(0);
 
   const handleAddToBet = (amount: number) => {
-    // if (currentBet + amount <= balance) {
-    //   setCurrentBet(currentBet + amount);
-    // }
-    // else {
-    //   alert('Not emough balance for this bet!');
-    // }
     setCurrentBet(currentBet + amount);
   };
 
   const handlePlaceBet = () => {
-    // if (currentBet > 0) {
-    //   betEvent(currentBet);
-    //   setCurrentBet(0);
-    // }
-    // else {
-    //   alert('Please select a valid bet!');
-    // }
     betEvent(currentBet);
     setCurrentBet(0);
   };

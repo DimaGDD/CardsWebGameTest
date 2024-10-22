@@ -1,17 +1,17 @@
 .controlsContainer {
   display: flex;
   justify-content: center;
-  align-items: center; /* Центрируем вертикально */
-  margin: 2em 3em 1em 3em;
-  gap: 50px;
+  flex-wrap: wrap; /* Позволяем элементам переходить на следующую строку */
 }
 
 .betContainer {
   display: flex;
   align-items: center;
-  color: white;
-  margin: 0 0.5em;
-  padding: 0 1em;
+  justify-content: center; /* Центрируем содержимое */
+  margin: 0.5em;
+  padding: 1em;
+  width: calc(100% - 2em); /* Уменьшаем ширину для малых экранов */
+  max-width: 600px; /* Устанавливаем максимальную ширину для больших экранов */
   background: black;
   border: 5px solid white;
   border-radius: 15px;
@@ -23,11 +23,10 @@
   align-items: center;
   gap: 5px;
   width: 100%;
-  margin: 0 0 0 -5em;
 }
 
 .placeBetText {
-  width: 20%;
+  width: 30%; /* Увеличиваем ширину текста для более мелких экранов */
   height: 60px;
   background: black;
   border: 5px solid white;
@@ -44,12 +43,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 5em 0;
+  margin: 1em 0 1em;
 }
 
 .input {
-  width: 1px;
-  flex-grow: 1;
+  width: 100%; /* Задаем ширину 100% */
   margin: 0 0 0 0.5em;
   font-size: 200%;
   text-align: right;
@@ -62,8 +60,7 @@
 }
 
 .inputError {
-  width: 1px;
-  flex-grow: 1;
+  width: 100%; /* Задаем ширину 100% */
   margin: 0 0 0 0.5em;
   font-size: 200%;
   text-align: right;
@@ -86,7 +83,7 @@
   font-weight: bold;
   margin: 0 0.5em;
   padding: 1em;
-  width: 80%;
+  width: calc(80% - 2em); /* Уменьшаем ширину для малых экранов */
   background: black;
   outline: none;
   border: 5px solid white;
@@ -98,13 +95,13 @@
 }
 
 .chipButton {
-  width: 80px;
+  width: 80px; /* Уменьшаем размер кнопок чипов для малых экранов */
   height: 80px;
   background-color: #ffcc00;
   border: 5px solid black;
   border-radius: 50%;
   color: black;
-  font-size: 24px;
+  font-size: 20px; /* Уменьшаем размер шрифта для малых экранов */
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transitions */
@@ -131,18 +128,62 @@
 
 @media screen and (max-width: 992px) {
   .betContainer {
-    width: 50%;    
+    width: 80%; /* Увеличиваем ширину контейнера для мобильных устройств */
+  }
+
+  .placeBetText {
+    width: 40%; /* Меняем ширину текста для мобильных устройств */
+    font-size: 20px; /* Уменьшаем размер шрифта для мобильных устройств */
   }
 }
 
 @media screen and (max-width: 600px) {
   .betContainer {
-    width: 70%;        
+    width: 90%; /* Увеличиваем ширину контейнера для маленьких экранов */
   }
+  
   .betContainer h4 {
     font-size: 75%;        
   }
+  
   .betContainer input {
     font-size: 125%;        
   }
+
+  .button {
+    font-size: 16px; /* Уменьшаем размер шрифта для кнопок на маленьких экранах */
+    width: 100%; /* Кнопки занимают всю ширину контейнера */
+  }
+
+  .chipButton {
+    width: 60px; /* Дополнительно уменьшаем размер кнопок чипов для маленьких экранов */
+    height: 60px;
+    font-size: 18px; /* Уменьшаем размер шрифта для кнопок чипов */
+  }
 }
+
+@media screen and (max-width: 450px) {
+  .betContainer {
+    width: 90%; /* Увеличиваем ширину контейнера для маленьких экранов */
+  }
+  
+  .betContainer h4 {
+    font-size: 75%;        
+  }
+  
+  .betContainer input {
+    font-size: 125%;        
+  }
+
+  .button {
+    font-size: 16px; /* Уменьшаем размер шрифта для кнопок на маленьких экранах */
+    width: 100%; /* Кнопки занимают всю ширину контейнера */
+  }
+
+  .chipButton {
+    width: 50px; /* Дополнительно уменьшаем размер кнопок чипов для маленьких экранов */
+    height: 50px;
+    font-size: 18px; /* Уменьшаем размер шрифта для кнопок чипов */
+  }
+}
+
