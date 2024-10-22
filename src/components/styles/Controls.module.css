@@ -1,0 +1,148 @@
+.controlsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Центрируем вертикально */
+  margin: 2em 3em 1em 3em;
+  gap: 50px;
+}
+
+.betContainer {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 0 0.5em;
+  padding: 0 1em;
+  background: black;
+  border: 5px solid white;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+}
+
+.placeBet {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  margin: 0 0 0 -5em;
+}
+
+.placeBetText {
+  width: 20%;
+  height: 60px;
+  background: black;
+  border: 5px solid white;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.chipsContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 5em 0;
+}
+
+.input {
+  width: 1px;
+  flex-grow: 1;
+  margin: 0 0 0 0.5em;
+  font-size: 200%;
+  text-align: right;
+  margin: 5px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: black;
+  color: white;
+}
+
+.inputError {
+  width: 1px;
+  flex-grow: 1;
+  margin: 0 0 0 0.5em;
+  font-size: 200%;
+  text-align: right;
+  margin: 5px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: black;
+  color: red;
+}
+
+.input::-webkit-inner-spin-button, 
+.inputError::-webkit-inner-spin-button {
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.button {
+  color: white;
+  font-weight: bold;
+  margin: 0 0.5em;
+  padding: 1em;
+  width: 80%;
+  background: black;
+  outline: none;
+  border: 5px solid white;
+  border-radius: 15px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.chipButton {
+  width: 80px;
+  height: 80px;
+  background-color: #ffcc00;
+  border: 5px solid black;
+  border-radius: 50%;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transitions */
+}
+
+.chipButton:hover {
+  transform: scale(1.1); /* Scale on hover */
+  background-color: #ffd700; /* Change color on hover */
+}
+
+@media (hover: hover) {
+  .button:hover {
+    color: black;
+    background: white;
+    border: 5px solid black;
+  }
+}
+
+.button:disabled {
+  color: gray;
+  background: rgb(60, 60, 60);
+  border: 5px solid gray;
+}
+
+@media screen and (max-width: 992px) {
+  .betContainer {
+    width: 50%;    
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .betContainer {
+    width: 70%;        
+  }
+  .betContainer h4 {
+    font-size: 75%;        
+  }
+  .betContainer input {
+    font-size: 125%;        
+  }
+}
