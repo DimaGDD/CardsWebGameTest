@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/CardsWebGameTest/static/css/main.26f16617.css",
-    "main.js": "/CardsWebGameTest/static/js/main.c7258074.js",
+    "main.js": "/CardsWebGameTest/static/js/main.e6c5ecc0.js",
     "index.html": "/CardsWebGameTest/index.html",
     "main.26f16617.css.map": "/CardsWebGameTest/static/css/main.26f16617.css.map",
-    "main.c7258074.js.map": "/CardsWebGameTest/static/js/main.c7258074.js.map"
+    "main.e6c5ecc0.js.map": "/CardsWebGameTest/static/js/main.e6c5ecc0.js.map"
   },
   "entrypoints": [
     "static/css/main.26f16617.css",
-    "static/js/main.c7258074.js"
+    "static/js/main.e6c5ecc0.js"
   ]
 }
