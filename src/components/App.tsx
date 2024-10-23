@@ -3,6 +3,7 @@ import Status from './Status';
 import Controls from './Controls';
 import Hand from './Hand';
 import jsonData from '../deck.json';
+import { useWebApp } from '@vkruglikov/react-telegram-web-app';
 
 const App: React.FC = () => {
   enum GameState {
@@ -55,6 +56,12 @@ const App: React.FC = () => {
       setBet(newBet);
     }
   };
+
+  const WebApp = useWebApp();
+
+  useEffect(() => {
+    WebApp.expand();
+  }, []);
 
   useEffect(() => {
     if (gameState === GameState.init) {

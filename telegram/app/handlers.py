@@ -25,7 +25,7 @@ async def on_startup(bot):
 async def cmd_start(message: Message):
     chat_id = message.chat.id
 
-    sent_message = await message.answer('Привет!', reply_markup=kb.main)
+    sent_message = await message.answer('Карточная игра!', reply_markup=kb.main)
     message_start_id = sent_message.message_id
 
     all_users = await get_all_users()

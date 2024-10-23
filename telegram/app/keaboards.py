@@ -8,7 +8,7 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, WebAppInfo, Inlin
 
 
 main = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text='Play', web_app=WebAppInfo(url='https://dimagdd.github.io/CardsWebGameTest'))]
+    [InlineKeyboardButton(text='Play', web_app=WebAppInfo(url='https://d63a-78-24-102-65.ngrok-free.app'))]
 ])
 
 
